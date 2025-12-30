@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haritdrishti Vimana | Drone with Green Vision</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --green:#00ff9d;
+    --dark:#071a13;
+    --glass:rgba(255,255,255,0.12);
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(-45deg,#071a13,#003b29,#0a3d2b,#00140d);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    color:#eafff4;
+    scroll-behavior:smooth;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.35);
+    z-index:1000;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:22px;
+    padding:12px;
+    margin:0;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:var(--green);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+}
+
+section{
+    min-height:100vh;
+    padding:120px 12% 80px;
+    display:flex;
+    align-items:center;
+}
+
+.glass{
+    background:var(--glass);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.4);
+    width:100%;
+}
+
+.hero h1{
+    text-align:center;
+    font-size:3rem;
+}
+
+.hero span{color:var(--green);}
+
+.hero p{
+    text-align:center;
+    max-width:850px;
+    margin:15px auto;
+    opacity:0.9;
+}
+
+h2{
+    color:var(--green);
+    margin-bottom:15px;
+}
+
+ul,ol{
+    line-height:1.8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:22px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(0,255,157,0.15);
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,0.5);
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#objective">Objective</a></li>
+<li><a href="#background">Background</a></li>
+<li><a href="#working">Working</a></li>
+<li><a href="#methodology">Methodology</a></li>
+<li><a href="#components">Components</a></li>
+<li><a href="#applications">Applications</a></li>
+<li><a href="#advantages">Advantages</a></li>
+<li><a href="#future">Future</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div class="glass reveal">
+<h1>Haritdrishti <span>Vimana</span></h1>
+<p><em>Drone with Green Vision</em></p>
+<p>
+Haritdrishti Vimana is an AI-based hybrid waste management system that integrates
+aerial drones and autonomous land rovers to identify, collect, and segregate waste,
+with a special focus on reducing plastic pollution in well-maintained public and private spaces.
+</p>
+</div>
+</section>
+
+<section id="objective">
+<div class="glass reveal">
+<h2>Objective</h2>
+<ul>
+<li>Develop a hybrid waste management system using drones and autonomous rovers</li>
+<li>Improve waste identification and collection efficiency in tourist spots, landmarks, green zones, smart cities and private estates</li>
+<li>Use AI-based image classification to segregate biodegradable, non-biodegradable and plastic waste</li>
+<li>Reduce human labour and exposure to unhygienic waste</li>
+<li>Encourage eco-friendly alternatives such as compostable bags, paper and bamboo products</li>
+</ul>
+</div>
+</section>
+
+<section id="background">
+<div class="glass reveal">
+<h2>Background / Problem Statement</h2>
+<p>
+Waste management remains a major environmental challenge, especially in areas
+with high visitor movement and large infrastructure. Traditional manual methods
+are labour-intensive, time-consuming and often result in poor segregation.
+</p>
+<p>
+Haritdrishti Vimana introduces a futuristic solution by combining aerial monitoring
+with AI-driven autonomous ground collection, making waste management more organized,
+scalable and efficient, particularly in well-maintained environments.
+</p>
+</div>
+</section>
+
+<section id="working">
+<div class="glass reveal">
+<h2>Working Principle</h2>
+<ol>
+<li>A drone (SkyEye) surveys the area and identifies waste hotspots</li>
+<li>GPS coordinates of detected waste locations are generated</li>
+<li>The autonomous rover receives the coordinates</li>
+<li>Raspberry Pi processes images to classify waste using AI</li>
+<li>Arduino-controlled mechanisms segregate waste into appropriate bins</li>
+<li>The drone continues aerial monitoring for verification</li>
+</ol>
+</div>
+</section>
+
+<section id="methodology">
+<div class="glass reveal">
+<h2>Methodology</h2>
+<ul>
+<li>Drone-based area scanning and data collection</li>
+<li>Wireless transmission of GPS and image data</li>
+<li>Autonomous navigation with obstacle detection using ultrasonic sensors</li>
+<li>AI-based waste identification at each hotspot</li>
+<li>Separate tracking of plastic waste for sustainability analysis</li>
+<li>Continuous repetition until all waste hotspots are cleared</li>
+</ul>
+</div>
+</section>
+
+<section id="components">
+<div class="glass reveal">
+<h2>Components Used</h2>
+<div class="grid">
+<div class="card">
+<strong>Hardware</strong>
+<ul>
+<li>Drone with GPS & Camera</li>
+<li>4WD Robotic Rover</li>
+<li>Raspberry Pi</li>
+<li>Arduino Uno</li>
+<li>Ultrasonic Sensors</li>
+<li>Servo / Flip Motors</li>
+<li>Battery (Optional Solar Panel)</li>
+</ul>
+</div>
+<div class="card">
+<strong>Software</strong>
+<ul>
+<li>Python (TensorFlow / OpenCV)</li>
+<li>Arduino IDE</li>
+<li>GPS Mapping Software</li>
+<li>Data Logging & Analysis Tools</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="applications">
+<div class="glass reveal">
+<h2>Applications</h2>
+<div class="grid">
+<div class="card">Golf Courses</div>
+<div class="card">Historic Monuments & Tourist Places</div>
+<div class="card">Smart Cities & Developed Roads</div>
+<div class="card">Religious & Cultural Sites</div>
+<div class="card">Large Farmhouses & Private Estates</div>
+<div class="card">Monitoring of Normal Roads</div>
+</div>
+</div>
+</section>
+
+<section id="advantages">
+<div class="glass reveal">
+<h2>Advantages</h2>
+<ul>
+<li>Reduces dependency on manual labour</li>
+<li>Accurate AI-based waste segregation</li>
+<li>Efficient coverage of large and complex areas</li>
+<li>Promotes eco-friendly alternatives by tracking plastic waste</li>
+<li>Provides aerial monitoring and reporting</li>
+<li>Scalable for multi-drone and multi-rover deployment</li>
+</ul>
+</div>
+</section>
+
+<section id="future">
+<div class="glass reveal">
+<h2>Future Scope</h2>
+<ul>
+<li>Integration of multiple autonomous drones</li>
+<li>Expansion to classify glass, metal and textile waste</li>
+<li>Smart city integration for centralized monitoring</li>
+<li>Data-driven insights for sustainable planning</li>
+</ul>
+</div>
+</section>
+
+<section id="conclusion">
+<div class="glass reveal">
+<h2>Conclusion</h2>
+<p>
+Haritdrishti Vimana presents a sustainable and innovative approach to modern waste
+management by integrating AI, drones and autonomous rovers. The system minimizes
+human effort while ensuring efficient waste identification, segregation and monitoring,
+making it highly suitable for organized, high-profile environments.
+</p>
+</div>
+</section>
+
+<footer>
+Haritdrishti Vimana • AI-Powered Sustainable Waste Management
+</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+reveals.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('active');
+}
+});
+});
+</script>
+
+</body>
+</html>
